@@ -1,0 +1,100 @@
+.content {
+  box-sizing: border-box;
+  width: 80%;
+  min-height: 100px;
+  border: 1px solid #cccccc;
+  margin-bottom: 24px;
+  padding: 16px;
+  max-height: 60vh;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #dddddd;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.content p {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 16px 0;
+  padding: 8px 16px
+}
+
+.content p::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.content .ai {
+  background-color: lightblue;
+}
+
+.content .ai::before {
+  right: 100%;
+  border-width: 5px 10px 5px 0;
+  border-color: transparent lightblue transparent transparent;
+}
+
+.content .self {
+  margin-left: auto;
+  background-color: #eeeeee;
+}
+
+.content .self::before {
+  left: 100%;
+  border-width: 5px 0 5px 10px;
+  border-color: transparent transparent transparent #eeeeee;
+}
+
+.form {
+  display: flex;
+  width: 50%;
+  gap: 16px;
+}
+
+.form input {
+  display: inline-block;
+  border-radius: 8px;
+  flex-grow: 1;
+  border: 1px solid #cccccc;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form button {
+  border: 1px solid #cccccc;
+  width: 20%;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+.form button:hover {
+  background-color: #cecece;
+  cursor: pointer;
+}
+
+.form button:focus {
+  outline: none;
+}
